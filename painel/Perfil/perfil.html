@@ -23,7 +23,7 @@
                     <!-- Lista de links de navegação -->
                     <ul class="ul">
                         <!-- Ícone de casa com link para a página inicial -->
-                        <li> <a href="/inicio/inicio.html"> <i class='bx bxs-home'></i> </a> </li>
+                        <li> <a href="/painel/painel.html"> <i class='bx bxs-home'></i> </a> </li>
                     </ul>
                 </nav>
                 <!-- Fim do container -->
@@ -54,12 +54,12 @@
         <!-- end line -->
         <!-- botões list -->
         <div class="buttons">
-            <button><a href="#"><i class='bx bx-user'></i> Perfil</a></button>
+            <button><a href="/painel/Perfil/perfil.html"><i class='bx bx-user'></i> Perfil</a></button>
             <button><a href="/painel/AdicionarDD/adicionar.html"><i class='bx bx-plus'></i> Adicionar Dados</a></button>
             <button><a href="#"><i class='bx bx-trash'></i> Deletar Dados</a></button>
             <button><a href="#"><i class='bx bx-edit'></i> Editar Dados</a></button>
             <button><a href="#"><i class='bx bx-chart'></i> Gráficos</a></button>
-            <button><a href="#"><i class='bx bx-table'></i> Tabelas</a></button>
+            <button><a href="/painel/Tabelas/tabela-filter.html"><i class='bx bx-table'></i> Tabelas</a></button>
             <button><a href="#"><i class='bx bx-cog'></i> Configurações</a></button>
             <button><a href="/inicio/inicio.html"><span><i class='bx bx-log-out'></i>Sair</span></a></button>
         </div>
@@ -76,13 +76,69 @@
             </div>
             <div class="text-user2">
                 <h2>Admin da Silva</h2>
-                <h3>ID: 023534</h3>
+                <h4>ID: 023534</h4>
             </div>
         </div>
         <!-- Fim caixa perfil -->
         <!-- line -->
         <hr class="line-menu">
         <!-- end line -->
+        <!-- Dados -->
+        <form action="#">
+            <div class="form-first">
+                <div class="dados">
+                    <span class="title">Dados Pessoais</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="nomeCompleto">Nome completo</label>
+                            <div class="input-container">
+                                <input type="text" id="nomeCompleto" placeholder="Admin da Silva" disabled>
+                                <button class="edit-btn"><i class='bx bx-edit'></i></button>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <div class="input-container">
+                                <input type="email" id="email" placeholder="AdminEEEP@gmail.com" disabled>
+                                <button class="edit-btn"><i class='bx bx-edit'></i></button>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="senha">Senha</label>
+                            <div class="input-container">
+                                <input type="password" id="senha" placeholder="admin123" disabled>
+                                <button class="edit-btn"><i class='bx bx-edit'></i></button>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="text">Gênero</label>
+                            <select name="genero">
+                                <option value="#" disabled selected >Selecione uma opção</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="outro">outro</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="text">Número Telefone</label>
+                            <input type="text" placeholder="(88) 9 9999-999">
+                        </div>
+                        <div class="input-field">
+                            <label for="text">Data de nascimento</label>
+                            <input type="date">
+                        </div>
+                        <!-- button -->
+                        <button type="submit">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- end dados -->
     </section>
     <!-- end main -->
 
+    <script src="perfil.js"></script>
+
+</body>
+</html>
