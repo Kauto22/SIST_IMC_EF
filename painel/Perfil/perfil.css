@@ -29,7 +29,7 @@ body {
 
 /* Classe para fundo verde */
 .background-verde {
-    background: url('/imagens/bk-verde.jpg') no-repeat;
+    background: url('/imagens/bk-verde-2.jpg') no-repeat;
     background-position: 98%;
     max-width: 80%;
     /* Adiciona flexbox para alinhar à direita */
@@ -131,7 +131,7 @@ nav {
 
 /* Caixa perfil */
 .box-profile{
-    background: url('/imagens/bk-verde.jpg') no-repeat;
+    background: url('/imagens/bk-verde-2.jpg') no-repeat;
     background-position: 78%;
     display: flex;
     justify-content: center;
@@ -224,12 +224,14 @@ nav {
 /* end main container */
 /* profile edit*/
 .main-container .box-profile2 {
-    background: var(--cinza);
+    /* background: var(--cinza); */
     display: flex;
     align-items: center;
     flex-direction: row;
     position: relative;
     margin: 10px 5%;
+    justify-content: center;
+    margin-top: 20px;
 }
 .profile-img2{
     height: 160px;
@@ -240,7 +242,7 @@ nav {
     justify-content: center;
     align-items: center;
     border: 5px var(--amarelo) solid;
-    margin-top: 20px;
+    
 }
 .profile-img2 i {
     font-size: 100px;
@@ -252,8 +254,54 @@ nav {
     margin-left: 20px;
     text-align: center;
 }
+
+.main-container .line-menu {
+    margin-top: 20px;
+}
 /* Fim Caixa perfil */
 /* end profile edit */
+
+/* form */
+.main-container form {
+    position: relative;
+    margin-top: 16px;
+    min-height: 10%;
+    max-width: 95%;
+    width: 100%;
+    /* background-color: var(--laranja); */
+    margin: 20px auto;
+    
+    
+}
+
+.main-container form .dateils {
+    margin-top: 10px;
+}
+
+.main-container form .title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: var(--verde);
+}
+
+.main-container form .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .fields .input-field {
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+
+}
+
 .input-field label{
     font-size: 12px;
     font-weight: 500;
@@ -273,15 +321,33 @@ nav {
 .input-field input:is(:focus, :valid){
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
-form .line-menu{
-    margin-top: 20px;
+/* inputs edit */
+.input-container {
+    display: flex;
+    align-items: center;
 }
+#nomeCompleto, #email, #senha {
+    width: 100%;
+}
+.input-field .edit-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5px; /* Espaçamento entre o input e o botão */
+}
+/* Estilos para destacar o input em edição */
+.input-field input.editing {
+    border-color: var(--verde); /* Muda a cor da borda */
+    box-shadow: 0 0 5px rgba(0, 130, 65, 0.5); /* Adiciona uma sombra */
+}
+/* end inputs edit */
 .main-container form button{
     margin-top: 20px;
     color: var(--verde);
     font-weight: 600;
     font-size: 16px;
-    align-items: flex-start; /* Ajuste na posição do conteúdo para não estar centralizado verticalmente */
+    align-items: flex-start;
     left: 20px;
     padding: 10px 15px;
     border: 1px solid #aaa;
@@ -295,16 +361,6 @@ form .line-menu{
     transition: 0.2s;
     cursor: pointer;
 }
-
-.search-button {
-    display: flex;
-    align-items: center;
-}
-
-.search-button i {
-    margin-right: 5px;
-}
-
 
 
 /* Media queries para diferentes tamanhos de tela */
