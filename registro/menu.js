@@ -5,10 +5,10 @@ menuIcon.addEventListener('click',()=>{
     
     if (ul.classList.contains('ativo')) {
         ul.classList.remove('ativo');
-        document.querySelector('.menu-icon img').src = '/imagens/menu.png';
+        document.querySelector('.menu-icon img').src = 'imagens/menu.png';
     }
     else {
         ul.classList.add('ativo');
-        document.querySelector('.menu-icon img').src = '/imagens/close.png';
+        document.querySelector('.menu-icon img').src = 'imagens/close.png';
     }
 })
