@@ -28,7 +28,7 @@ body {
 
 /* Classe para fundo verde */
 .background-verde {
-    background: url('/imagens/bk-verde-2.jpg') no-repeat;
+    background: url('/imagens/bk-verde.jpg') no-repeat;
     background-position: 98%;
     max-width: 80%;
     /* Adiciona flexbox para alinhar à direita */
@@ -130,7 +130,7 @@ nav {
 
 /* Caixa perfil */
 .box-profile{
-    background: url('/imagens/bk-verde-2.jpg') no-repeat;
+    background: url('/imagens/bk-verde.jpg') no-repeat;
     background-position: 78%;
     display: flex;
     justify-content: center;
@@ -224,7 +224,6 @@ span {
 .conteudo {
     width: 90%;
     height: 90%;
-    background: var(--cinza);
     margin: auto;
 }
 .title{
@@ -246,23 +245,17 @@ span {
     border: none;
     margin-bottom: 20px;
 }
-.graph-selects {
-    background: red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 /* Estilos dos cards de gráfico */
 .card-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    justify-content: space-between; /* Centralizar os cards horizontalmente */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
     max-width: 100%;
+    max-height: 600px;
 }
 
 .card {
-    width: 300px; /* 50% do espaço disponível menos a margem */
+    width: calc(25% - 40px); /* 50% do espaço disponível menos a margem */
     max-width: 300px; /* Máximo de largura para os cards */
     padding: 20px;
     background-color: white;
@@ -272,16 +265,25 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px; /* Reduzir a margem para que os cards fiquem mais próximos */
 }
+
 .card:hover {
     transform: translateY(-10px);
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .card a {
     margin: -0;
     background: var(--cinza);
     color: var(--verde);
+}
+.card-header {
+    max-width: 100%;
+}
+.card-header img {
+    width: 100%;
 }
 
 /* Media query para telas menores */
