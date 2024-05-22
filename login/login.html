@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,6 +21,9 @@
                     <ul class="ul">
                         <li> <a href="/inicio/inicio.html"> <i class='bx bxs-home'></i> </a> </li>
                     </ul>
+                    <div class="menu-icon">
+                        <img src="imagens/menu.png" alt="menu-icon">
+                    </div>
                 </nav>
                 <!-- end conntainer -->
             </header>  
@@ -32,32 +36,35 @@
 
         <!-- main -->
         <main>
-            <div class="case">
-                <form action="">
-                    <h1>Login</h1>
-                    <div class="input-box">
-                        <input type="text" placeholder="Email" required>
-                        <i class='bx bx-envelope'></i>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" placeholder="Senha" required>
-                        <i class='bx bx-lock-alt' ></i>
-                    </div>
-    
-                    <div class="remember-forgot">
-                        <label><input type="checkbox">Lembrar de mim</label>
-                        <a href="#">Esqueceu a senha?</a>
-                    </div>
-    
-                    <button type="submit" class="btn">Login</button>
-    
-                    <div class="register-link">
-                        <p>Não possui uma conta? <a href="/registro/registro.html">Registrar</a></p>
-                    </div>
-                </form>
+    <div class="case">
+        <form action="" method="post">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" name="email" placeholder="Email" required>
+                <i class='bx bx-envelope'></i>
             </div>
-        </main>
+            <div class="input-box">
+                <input type="password" name="senha" placeholder="Senha" required>
+                <i class='bx bx-lock-alt' ></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox">Lembrar de mim</label>
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+
+            <form action="painel.php" method="post">
+    <button type="submit" class="btn">Login</button>
+</form>
+
+            <div class="register-link">
+                <p>Não possui uma conta? <a href="index.php">Registrar</a></p>
+            </div>
+        </form>
+    </div>
+</main>
         <!-- end main -->
-          
+    
+    <script src="menu.js"></script>        
 </body>
 </html>
