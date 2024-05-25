@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="inicio.css">
     <title>Home</title>
+    <link rel="stylesheet" href="path/to/blox-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="background-verde">
@@ -13,13 +15,12 @@
             <!-- container -->
             <div class="container">
                 <nav>
-                    <div class="logo">EEEPstudio</div>
+                    <div class="logo">EEEPstudio <i class='bx bxl-slack'></i> </div>
                     <ul class="ul">
-                        <li> <a href="#">Home</a> </li>
-                        <li> <a href="#">IMC</a> </li>
-                        <li> <a href="#">IAC</a> </li>
-                        <li> <a href="#">Gráficos</a> </li>
-                        <li> <a href="/login/login.html"> <button class="btn-gradient">Entrar</button> </a> </li>
+                        <li>
+                            <p> Já possui uma conta?</p> 
+                            <a href="/login/login.html"> <button class="btn-gradient">Entrar</button> </a> 
+                        </li>
                     </ul>
                     <div class="menu-icon">
                         <img src="/imagens/menu.png" alt="menu-icon">
@@ -41,7 +42,7 @@
                 <!-- main-text -->
                 <div class="main-text">
                     <h1>Exercício é mais Saúde</h1>
-                    <h2>Mordeno & Clássico</h2>
+                    <h3>Registre-se como administrador agora!</h3>
                     <div>
                         <button class="btn-gradient"> <a href="/registro/registro.html">Começar agora</a> </button>
                         <img src="" alt="">
@@ -67,11 +68,11 @@
         <div class="container">
             <!-- resultados text -->
             <div class="resultados-text">
-                Ajudando pessoas e grandes e grandes futuros
+                Cuidando da sáude de nossos alunos garantimos o futuro da nação
             </div>
             <!-- end resultados text -->
             <!-- resultados numero -->
-            <div class="resultados-numero">
+            <!-- <div class="resultados-numero">
                 <p>
                     <span>+50 mil</span> <br>
                     Alunos
@@ -84,7 +85,7 @@
                     <span>+60 mil</span> <br>
                     Dados
                 </p>
-            </div>
+            </div> -->
             <!-- end resultados numero -->
         </div>
         <!-- end container -->
@@ -96,23 +97,33 @@
         <div class="container">
             <div class="card">
                 <h3 class="titulo">Por que cuidar da saúde física?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam obcaecati dolorum sit 
-                    nisi neque fugiat quia sequi dignissimos est architecto officiis maiores deleniti, alias 
-                    unde exercitationem corrupti ipsam dolore labore?
+                <p>Segundo a Organização Mundial da Saúde, OMS, a atividade 
+                    física regular é fundamental para prevenir e controlar 
+                    doenças cardíacas, diabetes tipo 2 e câncer, bem como
+                    para reduzir os sintomas de depressão e ansiedade,
+                    reduzir o declínio cognitivo, melhorar a memória 
+                    e exercitar a saúde do cérebro. 
                 </p>
             </div>
             <div class="card">
                 <h3 class="titulo">O que é IMC?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam obcaecati dolorum sit 
-                    nisi neque fugiat quia sequi dignissimos est architecto officiis maiores deleniti, alias 
-                    unde exercitationem corrupti ipsam dolore labore?
+                <p>O Índice de Massa Corporal (IMC) é uma das principais
+                    ferramentas, adotada inclusive pela Organização Mundial
+                    de Saúde (OMS), para calcular o chamado “peso ideal”.
+                    Obtido a partir do peso e da altura do indivíduo,
+                    o IMC também aponta níveis de magreza e obesidade,
+                    que são usados para nortear o trabalho de profissionais 
+                    de saúde e de educadores físicos.
+
+
                 </p>
             </div>
             <div class="card">
                 <h3 class="titulo">O que é IAC?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam obcaecati dolorum sit 
-                    nisi neque fugiat quia sequi dignissimos est architecto officiis maiores deleniti, alias 
-                    unde exercitationem corrupti ipsam dolore labore?
+                    <p>O Índice de Adiposidade Corporal, mais conhecido 
+                        como IAC, é um método utilizado para medir a gordura
+                        corporal.  Para o cálculo desse índice são utilizadas 
+                        medidas antropométricas, como circunferência do quadril e altura.
                 </p>
             </div>
         </div>
@@ -127,9 +138,9 @@
         <div class="container">
             <!-- ul 1 -->
             <ul>
-                <h3>EEEPstudio</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias recusandae non, culpa neque 
-                    adipisci officia iste eveniet repudiandae, esse reprehenderit saepe ea at ipsa, quam est?
+                <h3>Sobre nós</h3>
+                <p>Este site foi produzido em parceria com a Escola de Educação Profissional Manoel Mano - CE
+                    e têm como objetivo mapear e fazer o controle dos índices de massa corporal dos alunos.
                 </p>
                 <div class="redes-sociais">
                     <img src="" alt="manoelmano">
@@ -142,16 +153,29 @@
             <!-- ul 2 -->
             <ul>
                 <h3>Contato</h3>
-                <p> +55 (88) 9 9999-9999</p>
-                <p>emailEscola@gmail.com</p>
+                <p> <i class='bx bxl-whatsapp'></i> +55 (88) 9 9999-9999</p>
+                <p> <i class='bx bx-envelope'></i> emailEscola@gmail.com</p>
+                <a href="https://www.google.com.br/maps/place//@-5.1947651,-40.6338236,17z/data=!3m1!4b1?entry=ttu"><i class='bx bx-map'></i>Encontre-nos aqui</a>
 
             </ul>
             <!-- end ul 2 -->
 
             <!-- ul 3 -->
-            <ul></ul>
+            <ul>
+                <a href="https://eeepmanoelmano.com.br/"><img src="https://eeepmanoelmano.com.br/assets/logo-escola-light-d8ce9a76.svg" alt="manoelmano"></a>
+            </ul>
             <!-- end ul 3 -->
 
+            <!-- ul 4 -->
+            <ul>
+                <img class="logoCE" src="/imagens/logonova3.png" alt="CE">
+            </ul>
+            <!-- end ul 4 -->
+
+        </div>
+        <!-- copyright -->
+        <div class="copyright">
+            <p>&copy; 2024 EEEPstudio - EEEP MANOEL MANO - CRATEÚS TODOS OS DIREITOS RESERVADOS DA TURMA 3ºB 2024.</p>
         </div>
     </footer>
     <script src="main.js"></script>
