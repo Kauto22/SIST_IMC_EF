@@ -22,12 +22,15 @@ body {
 }
 
 .background-verde {
-    background: var(--verde);
+    background: url('/imagens/bk-verde-2.jpg');
+    background-position: 98%;
+    max-width: 100%;
+    /* Adiciona flexbox para alinhar à direita */
+    margin-left: auto;
 }
-
 .line {
-    background: var(--amarelo);
-    height: 20px;
+    background: linear-gradient(to right, var(--laranja2), var(--amarelo), var(--laranja2));
+    height: 10px;
     width: 100%;
     border: none;
 }
@@ -44,6 +47,11 @@ body {
     color: white;
     background-image: var(--degrade-btn);
     border: none;
+    border-radius: 3px;
+}
+.btn-gradient:hover{
+    transform: translateY(-2px);
+    transition: 0.2s;
     cursor: pointer;
 }
 /* classes do site */
@@ -75,8 +83,17 @@ footer {
 .ul li {
     margin: 0 30px;
     font-size: 15px;
+    color: white;
+    display: flex;
 }
-
+.ul li p {
+    color: white;
+    margin-right: 10px;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .ul li a {
     color: white;
 
@@ -125,7 +142,7 @@ main .container img {
 }
 
 .main-text .btn-gradient {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .main-text h1 {
@@ -143,7 +160,7 @@ main .container img {
     color: white;
     font-size: 1.6rem;
     font-weight: 600;
-    width: 50%;
+    width: 100%;
 }
 
 .resultados .resultados-numero{
@@ -168,6 +185,7 @@ main .container img {
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
+    text-align: justify;
 }
 .informs .card .titulo{
     margin: 13px 0;
@@ -189,7 +207,7 @@ main .container img {
 
 /* footer */
 footer {
-    background-color: var(--verde);
+    background: linear-gradient(to right, rgb(0,83,50), rgb(0,124,80));
 }
 footer .container{
     display: flex;
@@ -197,10 +215,21 @@ footer .container{
 }
 footer .container ul{
     width: 50%;
+    /* background: red; */
+    margin: 12px;
+    text-align: justify;
+}
+footer .container a{
+    color: white;
+}
+footer .container i{
+    font-size: 25px;
+    font-weight: 500;
 }
 footer .container h3{
     margin-bottom: 16px;
     font-weight: 600;
+    
 }
 footer .container .redes-sociais img {
     margin-right: 10px;
@@ -216,6 +245,23 @@ footer .container .redes-sociais img:hover{
 footer .container ul > p{
     margin-bottom: 10px;
 }
+footer .container ul a:hover{
+    cursor: pointer;
+}
+footer .container ul .logoCE{
+    height: 50%;
+    width: 100%;
+    background-color: white;
+    padding: 30px 30px;
+}
+/* copyright */
+footer .copyright {
+    text-align: center;
+    padding: 10px 0;
+    /* background-color: #f1f1f1;  *//* Escolha a cor de fundo desejada */
+    font-size: 14px;
+    color: white; /* Escolha a cor do texto desejada */
+}
 /* end footer */
 
 /* responsivo */
@@ -225,7 +271,7 @@ footer .container ul > p{
     }
     .ul {
         position: fixed;
-        background: var(--verde);
+        background: linear-gradient(to right, rgb(0,83,50), rgb(0,124,80));
         top: 0;
         width: 100%;
         height: 100%;
@@ -293,5 +339,9 @@ footer .container ul > p{
     }
     main .container .main-text h1 {
         font-size: 3rem;
+    }
+    footer .container ul{
+        margin: auto;
+        margin-bottom: 30px;
     }
 }
