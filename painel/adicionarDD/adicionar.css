@@ -83,18 +83,23 @@ nav {
     font-size: 30px;
     font-weight: bold;
     color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 30px; /* Margem ajustada para 30px */
 }
 
 /* Estilos da lista de navegação */
 .ul {
     display: flex;
     align-items: center;
+    margin-left: auto; /* Alinha a lista de navegação à direita */
 }
 
 /* Estilos dos itens da lista de navegação */
 .ul li {
-    margin: 0 30px;
-    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Alinha a lista de navegação à direita */
 }
 
 /* Ícones da lista de navegação */
@@ -215,11 +220,10 @@ nav {
     background-color: white;
      /* Adiciona flexbox para alinhar à direita */
     margin-left: auto;
-    height: calc(100vh - 40px); /* Altura ajustada para preencher o espaço disponível na tela */
+    height: calc(100% - 50px); /* Altura ajustada para preencher o espaço disponível na tela */
     border-radius: 40px;
     box-shadow: 0px 5px 30px 2px rgb(0, 0, 0, 0.2);
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
@@ -306,12 +310,30 @@ form .line-menu{
 
 /* Media queries para diferentes tamanhos de tela */
 
-
+/* Media query para telas entre 1200px e 769px */
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+    .main-container {
+        padding: 0 40px; /* Adiciona margem de 40px ao contêiner principal */
+    }
+    form .fields .input-field {
+        width: calc(50% - 20px); /* Ajusta a largura dos campos para duas colunas com espaço entre eles */
+        margin: 10px; /* Adiciona margem entre os campos */
+    }
+    .main-container form {
+        position: relative;
+        margin-top: 16px;
+        max-height: 100%;
+        max-width: 80%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+/* REPONSIVIDADE PADRÃO */
 @media screen and (max-width: 1000px) {
     .background-verde {
         max-width: 75%;
     }
-    .line{
+    .line {
         max-width: 75%;
     }
     /* section menu */
@@ -322,25 +344,36 @@ form .line-menu{
     .main-container {
         max-width: 70%; /* Reduz a largura máxima para telas de até 900px */
     }
-    
-    .main-container {
-        max-width: 70%;
-    }
-    form .fields .input-field {
-        width: calc(40% - 2px);
-        margin-left: 15px;
-        margin-right: 15px;
-    }
+}
+/* Funções Menu */
+/* Estilos do ícone de menu */
+.menu-icon {
+    display: none; /* Ícone não visível em telas maiores que 768px */
+}
+/* Ícone de setinha para fechar o menu */
+.close-menu-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Inicialmente escondido */
 }
 
-@media screen and (max-width:750px) {
+/* Mostra a setinha quando o menu estiver aberto */
+.menu-container.open .close-menu-icon {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
     .main-container form {
-        overflow-y: scroll;
         position: relative;
         margin-top: 16px;
-        max-height: 10px;
-        max-width: 490px;
+        max-height: 100%;
+        max-width: 80%;
         width: 100%;
+        margin-bottom: 30px;
     }
     .main-container form::-webkit-scrollbar{
         display: none;
@@ -354,10 +387,86 @@ form .line-menu{
         margin-right: 60%;
         margin-left: 40%;
     }
+
+    
+    /* RESPONSIVIDADE PADRÃO */
+    .background-verde {
+        max-width: 100%;
+        margin-left: auto;
+    }
+    /* Linha decorativa */
+    .line {
+        max-width: 100%;
+    }
+    .menu-icon {
+        display: block;
+        font-weight: 600;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+    .menu-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transform: translateX(-100%);
+        transition: transform 0.8s ease-in-out;
+    }
+    .menu-container.open {
+        display: flex;
+        width: 100%; /* A largura que o menu ocupará quando aberto */
+        height: 100vh;
+        position: fixed;
+        z-index: 999;
+        background: white;
+        transform: translateX(0);
+    }
+    .buttons button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+    }
+    .buttons button a {
+        left: 0; /* Remove ajuste para centralizar o texto */
+        text-align: center; /* Centraliza o texto */
+        width: 100%; /* Faz o link ocupar toda a largura do botão */
+        font-size: 20px;
+    }
+    /* Main container */
+    .main-container {
+        max-width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: calc(100% - 50px); /* Altura ajustada para preencher o espaço disponível na tela */
+    }
+    
 }
+
 @media screen and (max-width: 630px) {
     .main-container {
         max-width: 95%; /* Reduz ainda mais a largura máxima para telas de até 630px */
+    }
+}
+@media screen and (max-width: 430px) {
+    .logo {
+        font-size: 25px;
+    }
+    .menu-icon {
+        font-size: 30px;
+    }
+    .ul {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .main-container {
+        max-width: 100%; /* Para telas muito estreitas, ocupar 100% do espaço disponível */
+        border-radius: 20px; /* Reduz a borda para telas muito estreitas */
     }
 }
 
