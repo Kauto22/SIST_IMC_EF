@@ -29,7 +29,7 @@ body {
 
 /* Classe para fundo verde */
 .background-verde {
-    background: url('/imagens/bk-verde.jpg') no-repeat;
+    background: url('/imagens/bk-verde-2.jpg') no-repeat;
     background-position: 98%;
     max-width: 80%;
     /* Adiciona flexbox para alinhar à direita */
@@ -83,18 +83,23 @@ nav {
     font-size: 30px;
     font-weight: bold;
     color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 30px; /* Margem ajustada para 30px */
 }
 
 /* Estilos da lista de navegação */
 .ul {
     display: flex;
     align-items: center;
+    margin-left: auto; /* Alinha a lista de navegação à direita */
 }
 
 /* Estilos dos itens da lista de navegação */
 .ul li {
-    margin: 0 30px;
-    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Alinha a lista de navegação à direita */
 }
 
 /* Ícones da lista de navegação */
@@ -131,7 +136,7 @@ nav {
 
 /* Caixa perfil */
 .box-profile{
-    background: url('/imagens/bk-verde.jpg') no-repeat;
+    background: url('/imagens/bk-verde-2.jpg') no-repeat;
     background-position: 78%;
     display: flex;
     justify-content: center;
@@ -161,21 +166,6 @@ nav {
     text-align: center;
 }
 /* Fim Caixa perfil */
-/* upload button */
-.upload-button{
-    display: flex;
-    justify-content: center;
-    /* background-color: var(--cinza); */
-}
-.upload-button button, #up {
-    position: relative;
-    right: 180px;
-    margin-left: 10px;
-}
-#up {
-    font-size: 30px;
-    color: var(--verde);
-}
 /* Linha menu */
 .line-menu{
     background: linear-gradient(to right, var(--laranja2), var(--amarelo), var(--laranja2));
@@ -269,6 +259,29 @@ nav {
     margin-left: 20px;
     text-align: center;
 }
+/* Estilo para o botão de upload */
+.upload-btn {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.upload-btn input[type="file"] {
+    display: none;
+}
+
+.upload-btn label {
+    padding: 8px 16px;
+    background-color: var(--amarelo);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn label:hover {
+    background-color: var(--laranja);
+}
+
 
 .main-container .line-menu {
     margin-top: 20px;
@@ -380,12 +393,78 @@ form .fields .input-field {
 
 /* Media queries para diferentes tamanhos de tela */
 
+/* Media query para telas entre 1200px e 769px */
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+    .main-container {
+        padding: 0 20px; /* Adiciona margem de 40px ao contêiner principal */
+    }
+    .main-container form {
+        position: relative;
+        margin-top: 16px;
+        max-height: 100%;
+        max-width: 80%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .main-container {
+        max-width: calc(100% - 50px); /* Ajusta a largura do contêiner */
+        padding: 0 40px; /* Adiciona margem de 40px ao contêiner principal */
+        height: calc(100% - 50px);
+    }
+    .main-container form {
+        position: relative;
+        margin-top: 16px;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    form .fields .input-field {
+        width: calc(50% - 20px); /* Ajusta a largura dos campos para duas colunas */
+        margin: 10px; /* Adiciona margem entre os campos */
+    }
+    .text-user2{
+        font-size: 1.6rem;
+    }
+    
+}
+/* RESPONSIVIDADE INDIVIDUAL */
+@media screen and (max-width:768px) {
+    .main-container form {
+        position: relative;
+        margin-top: 16px;
+        height: 100%; /* Ajusta a altura máxima para caber na tela */
+        max-width: 100%;
+        width: 100%;
+    }
+    .main-container form::-webkit-scrollbar {
+        display: none;
+    }
+    form .fields .input-field {
+        width: calc(100% - 20px); /* Ajusta a largura dos campos para uma coluna */
+        margin: 10px auto; /* Centraliza os campos e adiciona margem */
+    }
+    .main-container form button {
+        margin: 20px auto;
+        display: block;
+    }
+    .main-container {
+        max-width: calc(100% - 40px); /* Ajusta a largura do contêiner */
+        padding: 0 20px;
+        margin: 20px auto;
+        height: auto; /* Remove a altura fixa */
+    }
+    .text-user2{
+        font-size: 1.6rem;
+    }
+}
 
-@media screen and (max-width: 1000px) {
+/* RESPONSIVIDADE PADRÃO */
+@media screen and (max-width: 1200px) {
     .background-verde {
         max-width: 75%;
     }
-    .line{
+    .line {
         max-width: 75%;
     }
     /* section menu */
@@ -396,48 +475,121 @@ form .fields .input-field {
     .main-container {
         max-width: 70%; /* Reduz a largura máxima para telas de até 900px */
     }
-    
-    .main-container {
-        max-width: 70%;
-    }
-    form .fields .input-field {
-        width: calc(40% - 2px);
-        margin-left: 15px;
-        margin-right: 15px;
-    }
 }
 
-@media screen and (max-width:750px) {
-    .main-container form {
-        overflow-y: scroll;
-        position: relative;
-        margin-top: 16px;
-        max-height: 10px;
-        max-width: 490px;
-        width: 100%;
-    }
-    .main-container form::-webkit-scrollbar{
-        display: none;
-    }
-    form .fields .input-field {
-        width: calc(100% / 1);
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-    .main-container form button {
-        margin-right: 60%;
-        margin-left: 40%;
-    }
+/* Funções Menu */
+/* Estilos do ícone de menu */
+.menu-icon {
+    display: none; /* Ícone não visível em telas maiores que 768px */
 }
+/* Ícone de setinha para fechar o menu */
+.close-menu-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Inicialmente escondido */
+}
+
+/* Mostra a setinha quando o menu estiver aberto */
+.menu-container.open .close-menu-icon {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .background-verde {
+        max-width: 100%;
+        margin-left: auto;
+    }
+    /* Linha decorativa */
+    .line {
+        max-width: 100%;
+    }
+    .menu-icon {
+        display: block;
+        font-weight: 600;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+    .menu-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transform: translateX(-100%);
+        transition: transform 0.8s ease-in-out;
+    }
+    .menu-container.open {
+        display: flex;
+        width: 100%; /* A largura que o menu ocupará quando aberto */
+        height: 100vh;
+        position: fixed;
+        z-index: 999;
+        background: white;
+        transform: translateX(0);
+    }
+    .buttons button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+    }
+    .buttons button a {
+        left: 0; /* Remove ajuste para centralizar o texto */
+        text-align: center; /* Centraliza o texto */
+        width: 100%; /* Faz o link ocupar toda a largura do botão */
+        font-size: 20px;
+    }
+    /* Main container */
+    .main-container {
+        max-width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: calc(100% - 50px); /* Altura ajustada para preencher o espaço disponível na tela */
+    }
+    
+}
+
 @media screen and (max-width: 630px) {
     .main-container {
         max-width: 95%; /* Reduz ainda mais a largura máxima para telas de até 630px */
     }
+    .main-container .box-profile2 {
+        flex-direction: column;
+    }
+    .profile-img2 {
+        margin-bottom: 10px;
+    }
+    .text-user2 {
+        text-align: center; /* Centraliza o texto */
+    }
 }
-
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 430px) {
+    .logo {
+        font-size: 25px;
+    }
+    .menu-icon {
+        font-size: 30px;
+    }
+    .ul {
+        font-size: 10px;
+    }
+    .text-user2{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 380px) {
     .main-container {
-        max-width: 100%; /* Para telas muito estreitas, ocupar 100% do espaço disponível */
+        max-width: 90%; /* Para telas muito estreitas, ocupar 100% do espaço disponível */
         border-radius: 20px; /* Reduz a borda para telas muito estreitas */
+    }
+    .text-user2{
+        font-size: 1.2rem;
     }
 }
