@@ -313,6 +313,14 @@ form .fields .input-field {
     margin-right: 5px;
 }
 
+.table-container {
+    max-width: 90%;
+    max-height: 90%;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
 
 
 /* Media queries para diferentes tamanhos de tela */
