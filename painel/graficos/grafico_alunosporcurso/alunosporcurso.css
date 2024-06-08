@@ -549,6 +549,20 @@ form .fields .input-field {
         margin-bottom: 20px;
         height: calc(100% - 50px); /* Altura ajustada para preencher o espaço disponível na tela */
     }
+    .arrow-back {
+        position: absolute;
+        top: 20px;
+        right: -10px;
+        width: 35px; /* Largura da seta */
+        height: 35px; /* Altura da seta */
+
+    }
+    
+    .arrow-back i {
+        font-size: 20px; /* Tamanho do ícone */
+        font-weight: 600;
+        color: white; /* Cor do ícone */
+    }
     
 }
 
@@ -566,6 +580,14 @@ form .fields .input-field {
     }
     .ul {
         font-size: 10px;
+    }
+    .arrow-back {
+        position: absolute;
+        top: 20px;
+        right: -1px;
+        width: 35px; /* Largura da seta */
+        height: 35px; /* Altura da seta */
+
     }
 }
 @media screen and (max-width: 300px) {
